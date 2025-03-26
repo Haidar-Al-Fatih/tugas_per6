@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haidar76</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .header-top {
+            width: 100%;
+            text-align: left;
+            padding: 5px 20px;
+            font-size: 14px;
+            color: white;
+            background: #002244;
+        }
+        .logo {
+            width: 100%;
+            background: #547aa0;
+            padding: 10px 0px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            display: flex;
+            padding: 20px;
+            justify-content: space-between;
+        }
+        .content {
+            flex: 2;
+        }
+        .table-container {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .table-container img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .table-container td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .sidebar {
+            flex: 1;
+            margin-left: 20px;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Jam atau Real Time -->
+    <script> 
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            document.getElementById('real-time').textContent = timeString;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+    <div class="header-top" id="real-time">Time</div>
+
+    <!-- navigasi -->
+    <header>
+        <div class="logo">
+            <h1 width="200px;">Haidar76</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Kategori</a></li>
+                <li><a href="#">Populer</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- content/isi -->
+    <main>
+        <section class="content">
+            <h2>Berita Terbaru</h2>
+            <table class="table-container">
+                <tr>
+                    <td>
+                        <img src="image (12).png" alt="Post 1"></td>
+                    <td>
+                        <h3>Panci Komeng Telah Hilang!</h3>
+                        <p>Panci legendaris Sir Komeng yang selama ini melindungi bumi dari Alien telah menghilang siapa yang bisa menemukannya akan mendapat sandal Swallow 1 lusin.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="maxresdefault.png" alt="Post 2"></td>
+                    <td>
+                        <h3>Apakah David Gadgetin Penyuka Lagu Yoasobi!?</h3>
+                        <p>Banyak orang bertanya apakah lagu kesukaan dari seorang David Gadgetin adalah lagu Yoasobi.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="IMG_20250325_193833.jpg" alt="Post 3"></td>
+                    <td>
+                        <h3>Pria Ini Kaget Karena DanDanDan Akan...</h3>
+                        <p>DanDanDan adalah salah satu anime yang sedang populer baru-baru ini, dan tidak disangka setelah season pertama, anime ini akan...</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="image (11).png" alt="Post 4"></td>
+                    <td>
+                        <h3>Hmm... Perkiraan Negara Ini Akan Menjadi Seperti Apa Ya!?</h3>
+                        <p>Hmmmmmm......</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="hq720.png " alt="Post 5"></td>
+                    <td>
+                        <h3>Ketika Semuanya Sudah Muak Dengan...</h3>
+                        <p>Dengan apa tuh kira-kira...</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="bangboo-possessed.gif" alt="Post 6"></td>
+                    <td>
+                        <h3>Katanya Game ... Plagiat Dari Game ...!!!</h3>
+                        <p>Game apa yah itu!?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="mewing-mew.gif" alt="Post 7"></td>
+                    <td>
+                        <h3>Apakah Benar Pria Sigma Itu...</h3>
+                        <p>Pria Sigma Itu 🤫</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        
+        <!-- content sebelah kanan -->
+        <aside class="sidebar">
+            <h2>Kategori Terkenal</h2>
+            <table class="table-container">
+                <tr>
+                    <td><a href="#">Software</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Games</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Memes</a></td>
+                </tr>
+            </table>
+            <h2>Populer</h2>
+            <table class="table-container">
+                <tr>
+                    <td><a href="#">Berita Terbaru 2025</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Game PC Ringan 2025</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Software Editing Terpopuler</a></td>
+                </tr>
+            </table>
+        </aside>
+    </main>
+    
+    <!-- footer -->
+    <footer>
+        <p>&copy; 2025 Haidar76 Clone. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
